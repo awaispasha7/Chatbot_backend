@@ -4,11 +4,11 @@ FROM python:3.13-slim
 RUN apt-get update && apt-get install -y \
     libxcb1 \
     libxcb-xinerama0 \
-    libgl1-mesa-glx \
+    libgl1 \
     libglib2.0-0 \
     libsm6 \
     libxext6 \
-    libxrender-dev \
+    libxrender1 \
     libgomp1 \
     libxkbcommon-x11-0 \
     libxkbcommon0 \
