@@ -224,8 +224,16 @@ async def health_check():
         health_data["services"]["football_analysis"] = "operational"
         health_data["services"]["model_loaded"] = VideoProcessor._model is not None
         health_data["services"]["ffmpeg_available"] = check_ffmpeg_installed()
+        # Add available routes
+        health_data["services"]["football_routes"] = {
+            "upload": "/api/videos/upload",
+            "youtube": "/api/videos/youtube",
+            "job_status": "/api/jobs/{jobId}",
+            "result": "/api/results/{jobId}.mp4"
+        }
     else:
         health_data["services"]["football_analysis"] = "unavailable (dependencies missing)"
+        health_data["services"]["football_routes"] = None
     
     return health_data
 
