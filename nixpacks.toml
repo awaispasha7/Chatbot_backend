@@ -1,16 +1,25 @@
+[providers]
+python = "3.13"
+
 [phases.setup]
-nixPkgs = ["python313", "pip"]
+nixPkgs = ["python313", "pip", "ffmpeg"]
 
 [phases.install]
+aptPkgs = [
+  "libxcb1",
+  "libxcb-xinerama0",
+  "libgl1-mesa-glx",
+  "libglib2.0-0",
+  "libsm6",
+  "libxext6",
+  "libxrender-dev",
+  "libgomp1",
+  "libxkbcommon-x11-0",
+  "libxkbcommon0"
+]
 cmds = [
-  "apt-get update && apt-get install -y libxcb1 libxcb-xinerama0 libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev libgomp1",
   "pip install --upgrade pip",
   "pip install -r requirements.txt"
-]
-
-[phases.build]
-cmds = [
-  "echo 'Build complete'"
 ]
 
 [start]
