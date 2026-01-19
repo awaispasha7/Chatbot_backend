@@ -23,8 +23,11 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# Copy application code
+# Copy application code (including best.pt model file)
 COPY . .
+
+# Verify model file exists
+RUN if [ ! -f "best.pt" ]; then echo "WARNING: best.pt not found!"; else echo "✅ Model file found: $(du -h best.pt | cut -f1)"; fi
 
 # Expose port (Railway will set PORT env var)
 EXPOSE 8000
