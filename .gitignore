@@ -1,4 +1,4 @@
-﻿config.py
+config.py
 .env
 env.example
 venv/
@@ -10,8 +10,8 @@ consultation_requests.json
 logs/
 uploads/
 chroma_db/
-best.pt
-*.pt
+# best.pt - Keep this file, it's required for football analysis
+# *.pt - Don't ignore all .pt files
 outputs/
 runs/
 backend_debug.log
