@@ -1,0 +1,27 @@
+2026-01-19 21:04:01,566 - root - INFO - Processing job 83869e32-f506-4a90-b38c-0db2fa288dbf: Start processing. Input: ./uploads\83869e32-f506-4a90-b38c-0db2fa288dbf.avi
+2026-01-19 21:04:01,567 - root - INFO - Model loaded status: True
+2026-01-19 21:04:02,899 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 0
+2026-01-19 21:04:38,316 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 30
+2026-01-19 21:05:09,391 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 60
+2026-01-19 21:05:39,496 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 90
+2026-01-19 21:06:09,334 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 120
+2026-01-19 21:06:40,087 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 150
+2026-01-19 21:07:12,661 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 180
+2026-01-19 21:07:43,285 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 210
+2026-01-19 21:08:14,199 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 240
+2026-01-19 21:08:44,514 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 270
+2026-01-19 21:09:14,316 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 300
+2026-01-19 21:09:44,157 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 330
+2026-01-19 21:10:13,899 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 360
+2026-01-19 21:10:43,091 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 390
+2026-01-19 21:11:13,737 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 420
+2026-01-19 21:11:43,438 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 450
+2026-01-19 21:12:12,548 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 480
+2026-01-19 21:12:42,980 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 510
+2026-01-19 21:13:14,089 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 540
+2026-01-19 21:13:43,799 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 570
+2026-01-19 21:14:15,372 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 600
+2026-01-19 21:14:47,869 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 630
+2026-01-19 21:15:18,114 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 660
+2026-01-19 21:15:48,209 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 690
+2026-01-19 21:16:19,752 - root - INFO - Job 83869e32-f506-4a90-b38c-0db2fa288dbf: Processing frame 720

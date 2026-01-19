@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Consultation Management</title>
+    <link rel="icon" type="image/png" href="../assets/akeno-tech.png">
+    <link rel="stylesheet" href="admin_dashboard.css">
+</head>
+<body>
+    <div class="header">
+        <div class="brand">
+            <div class="brand-mark">
+                <img src="../assets/akeno-tech.png" alt="Admin Dashboard Logo">
+            </div>
+        </div>
+        <h1>📊 Admin Dashboard</h1>
+        <p>Consultation Management & Team Notifications</p>
+    </div>
+
+    <div class="container">
+        <!-- Statistics -->
+        <div class="stats-grid" id="statsGrid">
+            <div class="stat-card">
+                <h3 id="totalRequests">-</h3>
+                <p>Total Requests</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="pendingRequests">-</h3>
+                <p>Pending</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="confirmedRequests">-</h3>
+                <p>Confirmed</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="completedRequests">-</h3>
+                <p>Completed</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="cancelledRequests">-</h3>
+                <p>Cancelled</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="recentRequests">-</h3>
+                <p>Recent (7 days)</p>
+            </div>
+        </div>
+        
+        <!-- Action Buttons for Stats -->
+        <div class="refresh-section">
+            <button class="btn btn-primary refresh-btn" onclick="refreshAllData()">
+                <span class="refresh-icon">🔄</span>
+                Refresh All Data
+            </button>
+            <button class="btn btn-danger delete-btn" onclick="confirmDeleteAllData()">
+                <span class="delete-icon">🗑️</span>
+                Delete All Data
+            </button>
+        </div>
+
+        <!-- Recent Logs -->
+        <div class="section">
+            <div class="section-header">
+                <h2>📋 Recent Consultation Logs</h2>
+                <p>Latest consultation activities and status updates</p>
+            </div>
+            <div class="section-content">
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Time Range</label>
+                        <select id="timeRange">
+                            <option value="24">Last 24 hours</option>
+                            <option value="168">Last 7 days</option>
+                            <option value="720">Last 30 days</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Status</label>
+                        <select id="statusFilter">
+                            <option value="">All Statuses</option>
+                            <option value="pending">Pending</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="completed">Completed</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary logs-refresh-btn" onclick="loadRecentLogs()">Refresh</button>
+                </div>
+                <div id="logsTable"></div>
+            </div>
+        </div>
+
+        <!-- Team Management -->
+        <div class="section">
+            <div class="section-header">
+                <h2>👥 Team Management</h2>
+                <p>Manage team members who receive consultation notifications</p>
+            </div>
+            <div class="section-content">
+                <button class="btn btn-primary" onclick="openAddTeamModal()">Add Team Member</button>
+                <div id="teamTable"></div>
+            </div>
+        </div>
+
+        <!-- Consultation Requests -->
+        <div class="section">
+            <div class="section-header">
+                <h2>📅 Consultation Requests</h2>
+                <p>Manage and update consultation statuses</p>
+            </div>
+            <div class="section-content">
+                <div id="consultationsTable"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Team Member Modal -->
+    <div id="addTeamModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Team Member</h2>
+                <span class="close" onclick="closeAddTeamModal()">&times;</span>
+            </div>
+            <form id="addTeamForm">
+                <div class="form-group">
+                    <label for="teamName">Name</label>
+                    <input type="text" id="teamName" required>
+                </div>
+                <div class="form-group">
+                    <label for="teamEmail">Email</label>
+                    <input type="email" id="teamEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="teamRole">Role</label>
+                    <input type="text" id="teamRole" required>
+                </div>
+                <div class="form-group">
+                    <label for="teamPhone">Phone (Optional)</label>
+                    <input type="tel" id="teamPhone">
+                </div>
+                <button type="submit" class="btn btn-primary">Add Team Member</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete All Data Confirmation Modal -->
+    <div id="deleteConfirmModal" class="modal">
+        <div class="modal-content delete-modal">
+            <div class="modal-header delete-header">
+                <h2>🗑️ Delete All Data</h2>
+                <span class="close" onclick="closeDeleteConfirmModal()">&times;</span>
+            </div>
+            <div class="delete-warning">
+                <div class="warning-icon">⚠️</div>
+                <h3>Are you sure?</h3>
+                <p>This will permanently delete all consultation data. This action cannot be undone.</p>
+                <div class="confirmation-input">
+                    <label for="confirmText">Type <strong>"DELETE"</strong> to confirm:</label>
+                    <input type="text" id="confirmText" placeholder="Type DELETE here..." autocomplete="off">
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeDeleteConfirmModal()">Cancel</button>
+                <button class="btn btn-danger" id="confirmDeleteBtn" onclick="proceedWithDelete()" disabled>
+                    Delete All Data
+                </button>
+            </div>
+        </div>
+    </div>
+
+   
+    <script src="admin_dashboard.js"></script>
+</body>
+</html>

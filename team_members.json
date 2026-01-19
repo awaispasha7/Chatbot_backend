@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Sales Team",
+    "email": "ask@softtechniques.com",
+    "role": "Sales Representative",
+    "phone": "(888) 324-6560"
+  },
+  {
+    "name": "Project Manager",
+    "email": "ask@softtechniques.com",
+    "role": "Project Manager",
+    "phone": "(888) 324-6560"
+  }
+]
